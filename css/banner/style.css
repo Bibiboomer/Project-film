@@ -1,0 +1,226 @@
+/*banner的样式*/
+/*banner以内表单的样式*/
+.banner_box .Form{
+    position:absolute;
+    width:577px;
+    height:300px;
+    background-color: #000;
+    z-index:1000;
+    border:1px solid #b0ccd8;
+    margin:18px 0 18px 42px;
+}
+.Form>.Big{
+    width:94px;
+}
+.Big.fotmbox7{
+    border-bottom: 13px solid rgb(37,119,227);
+}
+.fotmbox1>.ftab{
+    border-left:4px solid #fc991a;
+    width:90px;
+    background: #fff;
+    color:rgb(37,119,227);
+}
+.ftab{
+    border-left:4px solid rgb(37,119,227);
+    font-size:15px;
+    color:#fff;
+    line-height:41px;
+    text-align: center;
+    width:90px;
+    height:41px;
+    background-color:rgb(37,119,227);
+}
+.ftab>span{
+    display: inline-block;
+    width: 66px;
+    height: 41px;
+    text-align: center;;
+}
+.Big+.Big>.ftab>span{
+    border-top:1px dashed #fff;
+}
+.Big:hover>.ftab{
+    background-color: #fff;
+    color:rgb(37,119,227);
+    border-left-color: #fc991a;
+}
+.banner_box>.Form .fcontent{
+    width:491px;
+    height:300px;
+    position:absolute;
+    top:0px;
+    left:94px;
+}
+/*内部的内部的切换，表单*/
+/*.fcont-box1{
+    width:491px;
+    height:300px;
+    position:relative;
+    background: #fff;
+}*/
+.fotmbox1 .formul{
+    position:relative;
+    width:491px;
+    height:300px;
+    background:#fff;
+}
+.formul>.box_li{
+    float:left;
+    border-bottom:2px solid rgb(102,102,102)
+}
+.formul>.tabb1.box_li{
+    border-bottom:none;
+}
+.formul>.box_li>.tabb{
+    height: 41px;
+}
+.formul>.box_li span{
+    margin-top: 25px;
+    width: 56px;
+    margin: 25px 10px;
+    display: inline-block;
+    border-bottom: 2px solid;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(102,102,102);
+    text-align:center;
+    /*color: rgb(0,102,204);*/
+}
+.formul>.box_li.tabb1 span{
+    margin-left:20px;
+    margin-right: 0px;
+}
+.formul>.box_li.tabb2 span{
+    margin-left:20px;
+}
+.formul>.box_li.tabb4 span{
+    width:67px;
+}
+.formul>.box_li.tabb5 span{
+    width:97px;
+}
+.formul>.box_li .formangle{
+    width:0px;
+    height:0px;
+    border-top:6px solid rgb(0,102,204);
+    border-left:6px solid #fff;
+    border-right:6px solid #fff;
+    border-bottom:none;
+    position:absolute;
+    top: 42px;
+    left: 42px;
+}
+.formul>.box_li.tabb2 .formangle{
+    left:118px;
+} 
+.formul>.box_li.tabb3 .formangle{
+    left:194px;
+} 
+.formul>.box_li.tabb4 .formangle{
+    left:276px;
+} 
+.formul>.box_li.tabb5 .formangle{
+    left:378px;
+} 
+.formul>.box_li .tabcontentt{
+    width: 491px;
+    height: 258px;
+    position:absolute;
+    top:42px;
+    left:0px;
+    background: #b0ccd8;
+} 
+.formul>.box_li.tabbb1 .tabcontentt{
+
+} 
+
+
+
+
+/*banner切换样式*/
+.banner_box{
+    /*top: 43px;
+    width: 1264px;
+    height: 338px;
+    position: relative;
+    border-bottom: 1px solid #b0ccd8;*/
+    width:1264px;
+    height:338px;
+    position:relative;
+    top:44px;
+    border-bottom:1px solid #b0ccd8;
+}
+.banner_box .banner_{
+    width:1264px;
+    height:340px;
+    position:absolute;
+    z-index:50;
+}
+
+
+
+
+.banner_box .banner6{
+    background-image:url('images/banner.png');
+}
+.tab.a6:hover+.banner_{
+    z-index:100;
+}
+.banner_box .banner2{
+    background-color:rgb(244,0,0);
+}
+.tab.a2:hover+.banner_{
+    z-index:100;
+}
+.banner_box .banner3{
+    background-color:rgb(184,199,0);
+}
+.tab.a3:hover+.banner_{
+    z-index:100;
+}
+.banner_box .banner4{
+    background-color:rgb(0, 128,0);
+}
+.tab.a4:hover+.banner_{
+    z-index:100;
+}
+.banner_box .banner5{
+    background-color:rgb(244, 0,220);
+}
+.tab.a5:hover+.banner_{
+    z-index:100;
+}
+.banner_box .banner1{
+    background-color:rgb(0, 200,220);
+}
+.tab.a1:hover+.banner_{
+    z-index:100;
+}
+.banner_box .tab{
+    position:absolute;
+    z-index: 1000;
+    bottom:20px;
+    right:265px;
+    display:block;
+    float:left;
+    list-style-type:none;
+    width:12px;
+    height:12px;
+    background-image: url('images/banner_button.png');
+}
+.banner_box .a5{
+    right:285px;
+}
+.banner_box .a4{
+    right:305px;
+}
+.banner_box .a3{
+    right:325px;
+}
+.banner_box .a2{
+    right:345px;
+}
+.banner_box .a1{
+    right:365px;
+}
