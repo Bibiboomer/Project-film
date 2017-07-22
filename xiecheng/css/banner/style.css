@@ -1,0 +1,484 @@
+/*banner的样式*/
+/*banner以内表单的样式*/
+.banner_box .Form{
+    position:absolute;
+    width:577px;
+    height:300px;
+    background-color: #000;
+    z-index:1000;
+    border:1px solid #b0ccd8;
+    margin:18px 0 18px 42px;
+}
+.Form>.Big{
+    width:94px;
+}
+.Big.fotmbox7{
+    border-bottom: 13px solid rgb(37,119,227);
+}
+.fotmbox1>.ftab{
+    border-left:4px solid #fc991a;
+    width:90px;
+    background: #fff;
+    color:rgb(37,119,227);
+}
+.ftab{
+    border-left:4px solid rgb(37,119,227);
+    font-size:15px;
+    color:#fff;
+    line-height:41px;
+    text-align: center;
+    width:90px;
+    height:41px;
+    background-color:rgb(37,119,227);
+}
+.ftab>span{
+    display: inline-block;
+    width: 66px;
+    height: 41px;
+    text-align: center;;
+}
+.Big+.Big>.ftab>span{
+    border-top:1px dashed #fff;
+}
+.Big:hover>.ftab{
+    background-color: #fff;
+    color:rgb(37,119,227);
+    border-left-color: #fc991a;
+}
+.banner_box>.Form .fcontent{
+    width:491px;
+    height:300px;
+    position:absolute;
+    top:0px;
+    left:94px;
+}
+/*内部的内部的切换，表单*/
+/*.fcont-box1{
+    width:491px;
+    height:300px;
+    position:relative;
+    background: #fff;
+}*/
+/*.formul>.tabb1.box_li:hover>.tabb{
+    color:rgb(0,102,204);
+}*/
+.fotmbox1 .formul{
+    position:relative;
+    width:491px;
+    height:300px;
+    background:#fff;
+}
+.formul>.box_li{
+    float:left;
+    border-bottom:2px solid rgb(102,102,102)
+}
+.formul>.tabb1.box_li{
+    border-bottom:none;
+}
+/*.formul>.tabb1.box_li:hover .formangle{
+    z-index: 1000;
+}
+.formul>.tabb1.box_li:hover>.tabcontentt{
+    z-index: 100;
+}*/
+.formul>.box_li>.tabb{
+    height: 41px;
+}
+/*hover之后span的下边框也变蓝色？？？？？*/
+
+.formul>.box_li>.tabb:hover>span{
+    color: rgb(0,102,204);
+}
+.formul>.box_li>.tabb:hover>.formangle{
+    z-index: 10000;
+}
+.formul>.box_li .tabb>span{
+    margin-top: 25px;
+    width: 56px;
+    margin: 25px 10px;
+    display: inline-block;
+    border-bottom: 2px solid;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(102,102,102);
+    text-align:center;
+    /*color: rgb(0,102,204);*/
+}
+
+/*.formul>.box_li .tabb>span:hover{
+     color: rgb(0,102,204);
+}*/
+.formul>.box_li.tabb1 span{
+    margin-left:20px;
+    margin-right: 0px;
+    color: rgb(0,102,204);
+}
+.formul>.box_li.tabb2 span{
+    margin-left:20px;
+}
+.formul>.box_li.tabb4 span{
+    width:67px;
+}
+.formul>.box_li.tabb5 span{
+    width:120px;
+}
+.formul>.box_li .formangle{
+    z-index: -1;
+    width:0px;
+    height:0px;
+    border-top:6px solid rgb(0,102,204);
+    border-left:6px solid #fff;
+    border-right:6px solid #fff;
+    border-bottom:none;
+    position:absolute;
+    top: 42px;
+    left: 42px;
+}
+.formul>.box_li.tabb2 .formangle{
+    left:118px;
+} 
+.formul>.box_li.tabb3 .formangle{
+    left:194px;
+} 
+.formul>.box_li.tabb4 .formangle{
+    left:276px;
+} 
+.formul>.box_li.tabb5 .formangle{
+    left:389px;
+} 
+.formul>.box_li .tabcontentt{
+    width: 491px;
+    height: 258px;
+    position:absolute;
+    top:42px;
+    left:0px;
+    /*background: #b0ccd8;*/
+} 
+
+/*先给一个z-index*/
+/*.formul>.box_li .formangle{
+    z-index: 100;
+}*/
+/*.formul>.box_li.tabb1 .tabcontentt{
+    z-index:100;
+}
+.formul>.box_li.tabb2 .tabcontentt{
+    z-index:90;
+    background-color:#fff;
+}
+.formul>.box_li.tabb3 .tabcontentt{
+    z-index:80;
+    background-color:#fff;
+}
+.formul>.box_li.tabb4 .tabcontentt{
+    z-index:70;
+    background-color:#fff;
+}
+.formul>.box_li.tabb5 .tabcontentt{
+    z-index:60;
+    background-color:#fff;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+.formul>.box_li .tabcontentt>form{
+    width:491px;
+    height:240px;
+    margin-top:18px;
+    background-color:#fff;
+}
+.formul>.box_li .tabcontentt .aim{
+    margin-left: 36px;
+}
+.formul>.box_li.tabb2 .tabcontentt .aim{
+    margin-left: 36px;
+}
+.formul>.box_li .tabcontentt>form span{
+    color:#272a2f;
+    font-size:12px;
+}
+
+.formul>.box_li form>span{
+    margin-right:10px;
+    margin-left: 36px;
+}
+.formul>.box_li form>.aim+input{
+    margin-left: 9px;
+    font-size:12px;
+    width:381px;
+    height:26px;
+    border-width:1px;
+    padding: 0px;
+}
+.formul>.box_li.tabb2 form>.aim+input{
+    margin-left:0px;
+    color: rgb(153,153,153);
+}
+.formul>.box_li form>.Date{
+    display: inline-block;
+    margin-top: 22px;
+    margin-left:23px;
+    margin-right: 10px;
+}
+.formul>.box_li form>.Date+input{
+    font-size:12px;
+    width:145px;
+    height:27px;
+    border-width:1px;
+    padding: 0px;
+}
+.formul>.box_li form>.hot_rank{
+    display: inline-block;
+    margin-top: 22px;
+    margin-left:25px;
+    margin-right: 5px;
+}
+.formul>.box_li.tabb2 form>.hot_rank{
+    display: inline-block;
+    margin-top: 22px;
+    margin-left:0px;
+    margin-right: 15px;
+}
+.formul>.box_li form>.hot_rank+input{
+    font-size:12px;
+    width:383px;
+    height:28px;
+    border-width:1px;
+    padding: 0px;
+}
+.formul>.box_li.tabb2 form> select{
+    font-size:12px;
+    width:143px;
+    height:20px;
+    margin: 0;
+    padding: 0;
+    border-width:1px;
+    margin-right: 10px;
+}
+.formul>.box_li form>.keyword{
+    display: inline-block;
+    margin-top: 22px;
+    margin-left:37px;
+    margin-right:9px;
+}
+.formul>.box_li form>.keyword+input{
+    font-size:12px;
+    width:383px;
+    height:28px;
+    border-width:1px;
+    padding: 0px;
+    color: rgb(153,153,153)
+}
+.formul>.box_li form>.putin{
+    background-color:rgb(255,176,0);   
+    display: inline-block;
+    font-size:12px;
+    width:143px;
+    height:31px;
+    border:1px solid #e48400;
+    color: #fff;
+    font-size:17px;
+    font-size:"微软雅黑";
+    margin-left: 319px;
+    margin-top:29px;
+}
+/*.formul>.box_li.tabb1 .tabcontentt option{
+    font-size:12px;
+}*/
+
+
+
+/*.formul>.box_li.tabbb1 .tabcontentt{
+
+} */
+
+.formul>.tabb1 .tabcontentt{
+    z-index:5;
+    
+}
+
+.formul>.tabb1:hover>.tabcontentt{
+    z-index: 100;
+}
+/*先设置一个最大的z-index修改样式*/
+.formul>.tabb2 .tabcontentt{
+    z-index: 4;
+}
+.formul>.tabb2:hover>.tabcontentt{
+    z-index: 100;
+}
+.formul>.tabb3 .tabcontentt{
+    z-index: 3;
+}
+.formul>.tabb3:hover>.tabcontentt{
+    z-index: 100;
+    background-color: #f00;
+    margin-top: 18px;
+    height: 240px;
+}
+.formul>.tabb4 .tabcontentt{
+    z-index: 2;
+}
+.formul>.tabb4:hover>.tabcontentt{
+    z-index: 100;
+    background-color: #fc0;
+    margin-top: 18px;
+    height: 240px;
+}
+.formul>.tabb5 .tabcontentt{
+    z-index: 1;
+}
+.formul>.tabb5:hover>.tabcontentt{
+    z-index: 100;
+    background-color: #ff0;
+    margin-top: 18px;
+    height: 240px;
+}
+.Big.fotmbox1>.ftab+.fcontent{
+    z-index:7;
+}
+.Big.fotmbox2>.ftab+.fcontent{
+    z-index:6;
+}
+.Big.fotmbox3>.ftab+.fcontent{
+    z-index:5;
+}
+.Big.fotmbox4>.ftab+.fcontent{
+    z-index:4;
+}
+.Big.fotmbox5>.ftab+.fcontent{
+    z-index:3;
+}
+.Big.fotmbox6>.ftab+.fcontent{
+    z-index:2;
+}
+.Big.fotmbox7>.ftab+.fcontent{
+    z-index:1;
+}
+.Big.fotmbox1>.ftab:hover+.fcontent{
+    z-index:100;
+}
+.Big.fotmbox2>.ftab:hover+.fcontent{
+    z-index:100;
+    background-color:#f00;
+}
+.Big.fotmbox3>.ftab:hover+.fcontent{
+    z-index:100;
+    background-color:#fb0;
+}
+.Big.fotmbox4>.ftab:hover+.fcontent{
+    z-index:100;
+    background-color:#ff0;
+}
+.Big.fotmbox5>.ftab:hover+.fcontent{
+    z-index:100;
+    background-color:#0f0;
+}
+.Big.fotmbox6>.ftab:hover+.fcontent{
+    z-index:100;
+    background-color:#0ff;
+}
+.Big.fotmbox7>.ftab:hover+.fcontent{
+    z-index:100;
+    background-color:#00f;
+}
+.tabb1>.tabb:hover+.tabcontentt{
+    z-index:100;
+}
+.tabb2>.tabb:hover+.tabcontentt{
+    z-index:100;
+}
+/*banner切换样式*/
+.banner_box{
+    /*top: 43px;
+    width: 1264px;
+    height: 338px;
+    position: relative;
+    border-bottom: 1px solid #b0ccd8;*/
+    width:1264px;
+    height:338px;
+    position:relative;
+    top:44px;
+    border-bottom:1px solid #b0ccd8;
+}
+.banner_box .banner_{
+    width:1264px;
+    height:340px;
+    position:absolute;
+    z-index:50;
+}
+
+
+
+
+.banner_box .banner6{
+    background-image:url('images/banner.png');
+}
+.tab.a6:hover+.banner_{
+    z-index:100;
+}
+.banner_box .banner2{
+    background-color:rgb(244,0,0);
+}
+.tab.a2:hover+.banner_{
+    z-index:100;
+}
+.banner_box .banner3{
+    background-color:rgb(184,199,0);
+}
+.tab.a3:hover+.banner_{
+    z-index:100;
+}
+.banner_box .banner4{
+    background-color:rgb(0, 128,0);
+}
+.tab.a4:hover+.banner_{
+    z-index:100;
+}
+.banner_box .banner5{
+    background-color:rgb(244, 0,220);
+}
+.tab.a5:hover+.banner_{
+    z-index:100;
+}
+.banner_box .banner1{
+    background-color:rgb(0, 200,220);
+}
+.tab.a1:hover+.banner_{
+    z-index:100;
+}
+.banner_box .tab{
+    position:absolute;
+    z-index: 1000;
+    bottom:20px;
+    right:265px;
+    display:block;
+    float:left;
+    list-style-type:none;
+    width:12px;
+    height:12px;
+    background-image: url('images/banner_button.png');
+}
+.banner_box .a5{
+    right:285px;
+}
+.banner_box .a4{
+    right:305px;
+}
+.banner_box .a3{
+    right:325px;
+}
+.banner_box .a2{
+    right:345px;
+}
+.banner_box .a1{
+    right:365px;
+}
