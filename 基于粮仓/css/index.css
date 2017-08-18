@@ -1,0 +1,94 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Hiragino Sans GB','冬青黑体','Hiragino Kaku Gothic ProN','Microsoft Yahei' ,'Simsun','Arial', 'Helvetica', 'sans-serif';
+}
+/*初始化记得完善*/
+
+/*缩写要写前面*/
+#nav_top{
+    width:100%;
+    background-color: #25292e;
+    height: 56px;
+}
+/*有子元素浮动了，所以父元素要添加overflow：hidden*/
+#nav_top>div{
+    /*overflow: hidden;*/
+    width: 1000px;
+    height: 56px;
+    margin: 0 auto;
+}
+#nav_top>div>div{
+    float: left;
+}
+#nav_top>div ul{
+    float: right;
+    list-style-type: none;
+}
+#nav_top>div ul li{
+    float:left;
+    line-height: 56px;
+    text-align: center;
+    position: relative;
+}
+/*a是行内元素*/
+#nav_top>div li>a{
+    color: #ccc;
+    font-size:12px;
+    text-decoration: none;
+    padding: 0 15px;
+}
+/*[display：none]*/
+#nav_top ul li .dropbox{
+    display: none;
+    position: absolute;
+    top:56px;
+    left:-120px;
+    width: 320px;
+    height: 160px;
+    /*background-color: rgb(41,47,52);*/
+}
+#nav_top ul li a.ccczoom{
+    color: #666;
+    border-left: 1px solid #525961;
+}
+
+#nav_top ul li:hover>a.ccczoom{
+    /*background-color:#000;*/
+    color: #ccc;
+}
+#nav_top ul li:hover p>a{
+    color: #ccc;    
+}
+#nav_top ul li:hover p.fffzoom>a{
+    color: #fff;
+}
+#nav_top ul li.dbfdezoom:hover{
+    background-color: rgb(41,47,52);
+    
+}
+#nav_top ul li .dropbox_inner>p{
+    background-color: rgb(41,47,52);
+}
+#nav_top ul li .dropbox_inner>p+p{
+    background-color: #7dbfde;
+    
+}
+#nav_top ul li .dropbox_inner a{
+    color: #ccc;
+    font-size: 13px;   
+}
+#nav_top .dropbox.drop2{
+    width:190px;
+    left:-70px;
+    background-color: rgb(41,47,52);
+}
+#nav_top .dropbox.drop p{
+    border
+}
+
+

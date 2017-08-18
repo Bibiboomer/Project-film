@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>
+			<input type="text" id="str"/>
+			<input type="button" id="btn" value="搜索"/>
+			<div></div>
+		</p>		
+		
+		
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$("#btn").click(function(){
+				
+				var strNew = $("#str").val();
+				//https://www.w3cschool.cn/jquery/attributes-val.html
+				console.log(strNew);
+				
+				
+				$.ajax({
+				"url": "http://h6.duchengjiu.top/shop/api_goods.php",
+				"type": "GET",
+				"data": {
+					"goods_id": strNew
+				},
+				"dataType": "json",
+				"success": function(response){
+					var obj = response;//fresponse是返回的数据
+					console.log(obj);//z这条输出可以判断数据在哪，方便，先一直存在着吧
+					//console.log(obj.code);所以要先来个if判断是0还是1
+					//console.log( obj.code === 1);//false
+					if( obj.code === 0){
+						//DOM操作
+
+						for( var i = 0 ; i < obj.data.length ; i++){
+							$("div").append('<li><img src="' +obj.data[i].goods_thumb+ '" /><p>' +obj.data[i].goods_name+ '</p><p>' +obj.data[i].goods_desc+ '</p><p class="price">' +obj.data[i].price+ '</p></li>');
+						}
+
+					}else{
+						alert("你好，您输入的商品不存在");
+					}
+//					for(var i=0;i<obj.data.length;i++){
+//						
+//						$("#goodsUl").append('<li><img src="' +obj.data[i].goods_thumb+ '" /><p>' +obj.data[i].goods_name+ '</p><p>' +obj.data[i].goods_desc+ '</p><p class="price">' +obj.data[i].price+ '</p></li>');
+//					}
+				}
+				
+				
+			})
+			})
+			
+			
+		</script>
+	</body>
+</html>
