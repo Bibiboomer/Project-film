@@ -24,6 +24,7 @@ a{
 }
 #nav_top>div>div{
     float: left;
+    height:56px;
 }
 #nav_top>div ul{
     float: right;
@@ -49,7 +50,7 @@ a{
     top:56px;
     left:-120px;
     width: 320px;
-    height: 160px;
+    /*height: 160px;*/
     /*background-color: rgb(41,47,52);*/
 }
 #nav_top ul li a.ccczoom{
@@ -74,7 +75,7 @@ a{
 #nav_top ul li .dropbox_inner>p{
     background-color: rgb(41,47,52);
 }
-#nav_top ul li .dropbox_inner>p+p{
+#nav_top ul li .drop1 p+p{
     background-color: #7dbfde;
     
 }
@@ -83,12 +84,101 @@ a{
     font-size: 13px;   
 }
 #nav_top .dropbox.drop2{
-    width:190px;
+    width:160px;
+    padding: 0 15px;
     left:-70px;
     background-color: rgb(41,47,52);
 }
-#nav_top .dropbox.drop p{
-    border
+#nav_top .dropbox.drop2 a{
+    display: block;
+    height:44px;
+    border-bottom: 1px solid #3f4449;
+    line-height: 44px;
+}
+#nav_top .dropbox.drop2 a>span{
+    float:left;
+}
+#nav_top .dropbox.drop2 a>span+span{
+    float:right;
 }
 
+/*顶部分类产品导航样式*/
+#nav_classify{
+    width: 100%;
+    height:49px;
+}
+#nav_classify>div{
+    width: 1000px;
+    height: 49px;
+    margin: 0 auto;
+    position: relative;
+}
+/*#nav_classify>div>*{
+    float:left;
+}*/
+#nav_classify>div>div{
+    float:rigth;
+}
+#goodsClassfiy{
+    width:665px;
+    height: 49px;
+}
+#goodsClassfiy>li{
+    float: left;
+    list-style-type: none;
+    border-bottom: 4px solid #ededed;
+    /*margin-left:15px;*/
+    text-align: center;
+    line-height: 45px;
+}
+#goodsClassfiy>li:hover{
+    border-bottom-color: #25292e
+}
+#goodsClassfiy>li>a{
+    font-size: 18px;
+    color:#333;
+    display: block;
+    padding: 0 15px;
+}
 
+/*iBanner的轮播效果*/
+#carousel{
+    width: 100%;
+    height:510px;
+    padding-top: 25px;
+}
+.carousel>div{
+    width:1000px;
+    height: 475px;
+    margin: 0 auto;
+    /*margin-top: 25px;*/
+    position: relative;
+    /*background-color: #000;*/
+}
+#carousel .oBanners li{
+    display: none;
+    list-style-type: none;
+}
+#carousel .oBanners li.fBlock{
+    display: block;
+}
+#carousel .oFocus ul{
+    margin-top: 3px;
+    padding: 7px 0;
+    height: 18px;
+    margin: 0 auto;
+    width: 208px;
+}
+#carousel .oFocus li{
+    list-style-type: none;
+    float: left;
+    vertical-align: top;
+}
+#carousel .oFocus li>span{
+    width:20px;
+    height:4px;
+    margin:0 3px;
+    background: #45494d;
+}
+/*1000475
+martop23*/

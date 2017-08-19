@@ -18,3 +18,25 @@ $("#nav_topList li:eq(3)").mouseenter( function(){
 $("#nav_topList li:eq(3)").mouseleave( function(){
    $("#nav_topList .dropbox:eq(1)").css( "display" ," none");
 })
+
+    //首页的页面分类导航
+    //get和ajax都可以
+    //ajax多了一个“data”方法，发送到服务器上的数据，可以在url后加上
+    //这样查询条件变多，输出的结果较少(多了条件：参数)
+    //回调函数两个参数function(data→response ，textStatus)
+    $.get("http://h6.duchengjiu.top/shop/api_cat.php",function(data){
+        console.log(data);
+
+        //得到多个li>a这样的结构→循环
+        for( var i = 0 ; i < data.data.length ;i++){
+
+            //放入结构
+
+            $("#goodsClassfiy").append('<li><a href="list.html?cat_id=' +data.data[i].cat_id+ '">' + data.data[i].cat_name +  '</a></li>');
+        }
+    })
+
+    //输入框跳转
+
+    //iBanner的轮播效果
+    
