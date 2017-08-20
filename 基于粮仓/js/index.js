@@ -3,21 +3,21 @@
 //用js可以用parent()指代
 //好像更不方便，鼠标移入要写背景色，移除还有删除背景色
 // nav_topList 中鼠标滑过显示drop，鼠标移出display:none
-$("#nav_topList li:eq(2)").mouseenter( function(){
+// $("#nav_topList li:eq(2)").mouseenter( function(){
 
-    $("#nav_topList .dropbox:eq(0)").css( "display" ," block");
-    // $(".dropbox:eq(0)").parent().css( "background-color" , "rgb(41,47,52)");
-})
-$("#nav_topList li:eq(2)").mouseleave( function(){
-   $("#nav_topList .dropbox:eq(0)").css( "display" ," none");
-})
-$("#nav_topList li:eq(3)").mouseenter( function(){
-   $("#nav_topList .dropbox:eq(1)").css( "display" ," block");
+//     // $("#nav_topList .dropbox:eq(0)").css( "display" ," block");
+//     $(".dropbox:eq(0)").parent().css( "background-color" , "rgb(41,47,52)");
+// })
+// $("#nav_topList li:eq(2)").mouseleave( function(){
+//    $("#nav_topList .dropbox:eq(0)").css( "display" ," none");
+// })
+// $("#nav_topList li:eq(3)").mouseenter( function(){
+//    $("#nav_topList .dropbox:eq(1)").css( "display" ," block");
 //    $(".dropbox:eq(1)").parent().css( "background-color" , "rgb(41,47,52)");
-})
-$("#nav_topList li:eq(3)").mouseleave( function(){
-   $("#nav_topList .dropbox:eq(1)").css( "display" ," none");
-})
+// })
+// $("#nav_topList li:eq(3)").mouseleave( function(){
+//    $("#nav_topList .dropbox:eq(1)").css( "display" ," none");
+// })
 
     //首页的页面分类导航
     //get和ajax都可以
@@ -36,51 +36,118 @@ $("#nav_topList li:eq(3)").mouseleave( function(){
         }
     })
 
+    
     //输入框跳转
 
-    //iBanner的轮播效果
+    //iBanner的传统轮播效果*(克隆下标为0的图片)
     //移入移出的按钮效果
-    $(".oBanners").mouseenter( function(){
-        $(".oBtns a").css("width",50);
-    })
-    $(".oBanners").mouseleave( function(){
-        $(".oBtns a").css("width",0);
-    })
-
-    //轮播效果
     //大轮子滚动
     //1自动播放 2鼠标移入停止播放 3 点击按钮图片切换，同时焦点改变
     //4 点击焦点图片切换
 
-    //找到lis(图片的容器)
-    var $lis = $(".oBanners ul li");//
-    var $oBtns = $(".oBanners .oBtns");//按钮
 
+    //和原生js一样先获取事件元素
+    var $carousel = $("#carousel");
+    var $leftBtn = $("a.leftBtn");
+    var $rightBtn = $("a.rightBtn");
+    var $m_unit = $(".m_unit");
+    var $banImgs = $(".m_unit ul li");
+    var $circles = $(".circles ol li");
+    
+    //自动传统轮播(自动向右滚动)最重要。克隆下标最小(0)的图片；定时器
+    $(".m_unit ul").append($(".m_unit ul li").eq(0).clone());
+    var timer = setInterval(rightBtnHandler,2000);
 
     //信号量
     var idx = 0;
-    var timer = null;
 
-    //事件
+    //事件==效果
 
+    //事件1：鼠标进入carousel，停止自动播放；鼠标移出继续自动向右播放
+    $carousel.mouseenter( function(){
+        clearInterval(timer);
+    });
+    $carousel.mouseleave( function(){
+        timer = setInterval( rightBtnHandler,2000);
+    });
 
-    $(".oBanners .leftBtn").click( function(){
-        //线判断当前运动状态：效果：点击一张只能动一次，不能持续运动
-        //函数节流
-        if( $lis.eq(idx).is(":animated")){
-            return;
-        }
-        //信号量改变
+    //事件2：鼠标进入carousel,按钮出现;
+    $carousel.mouseenter( function(){
+        $("#carousel .btns>a").addClass("onStyle");
+    });
+    $carousel.mouseleave( function(){
+        $("#carousel .btns>a").removeClass("onStyle");
+    });
+    //事件3：鼠标进入leftBtn和rightBtn时按钮的背景色发生变化
+    // $(".btns a").mouseenter( function(){
+    //     $(this).css("background-color", "#878787");
+    // })
+    // $(".btns a").mouseleave( function(){
+    //     $(this).css("opacity", 1);
+    // })
+
+    //事件4：核心事件：点击leftBtn。图片向左移动，下标减小
+    $leftBtn.click( function(){
+        
+        //首先判断当前运动状态；是不动，不是动；效果：点击一次动一次(图片滚动一张)
+        //除非鼠标移出carsousel或者再点击leftBtn才能播放下一张图片
+        //以上专业点说就是函数节流(简单理解：一次触发结束才能开始下一次触发)
+        if( $m_unit.is(":animated")) return;
+
+        //具体业务：点击图片下标减小
         idx--;
-        //先判断
-        if( idx < 0){
-            idx = $lis.length-1;
-        }
-        $lis.eq(idx).addClass
 
+            //运动结束后要做的事：判断范围
+            if(idx<0){
+                idx = 7;
+                //克隆之后多了一张，在临界点返回时不需要(img.lenght-1)
+                $m_unit.css("left",-8*475)
+            }
+            $m_unit.animate( {"left":-1000*idx},2000);
+
+            //附带事件：焦点样式改变
+            changeCircle();
+        
     })
+
+    //事件5：核心事件：点击rightBtn。图片向右移动，下标增大
+    $rightBtn.click( )
+
+    function rightBtnHandler(rightBtnHandler){
+      
+        //函数节流
+        if( $m_unit.is(":animated")) return;
+
+        idx++;
+
+        $m_unit.animate( { "left":-1000*idx},300,function(){
+
+            if( idx > 7){
+                idx=0;
+                $m_unit.css("left",0);
+            } 
+        });
+        changeCircle();
     
+    }
 
+    //事件6:鼠标点击焦点circle，图片切换和circle样式改变
+    $circles.click( function(){
 
+        idx = $(this).index();
+        console.log(idx);
+        $m_unit.animate( {"left":-1000*idx},300);
 
+        //附带事件：焦点样式改变
+        changeCircle();
+    })
 
+    //附带事件：鼠标点击按钮和点击焦点都会是的使得焦点样式改变：添加class名
+    function changeCircle(){
+
+        var n = idx <= 7 ? idx : 0;
+        
+        //排他
+        $circles.eq(n).addClass("onStyle").siblings().removeClass("onStyle");
+    }
+    

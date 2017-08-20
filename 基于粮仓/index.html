@@ -18,7 +18,6 @@
                     <li><a href="">登录</a></li>
 
                     <li><a href="">注册</a></li>
-
                     <li class ="dbfdezoom">
                         <a href="" class ="ccczoom">购物车</a>
                         <div class="dropbox drop1">
@@ -94,38 +93,74 @@
             </div>
         </div>
     </header>
-    <div class="carousel" id="carousel">
-        <div>
-            <div class="oBanners">
-                <div class="oBtns">
+
+<!--容器宽度为100%-->
+    <div class="carousel">
+       <!--传统轮播图结构分析-->
+       <!--一级div1个-->
+       <!--二级div3个: 1按钮 2图片 3焦点-->
+
+       <!--一级div1个设置关键属性position: relative和 overflow-x:hidden-->
+       <!--二级div2个除了btns（是Btns里面的a标签要设置该关键属性）均要设置属性为position：abosolute-->
+       
+       <!--二级div btn>a 关键属性：a标签：z-index
+       == a。onStyle：事件触发时样式
+       -->
+
+       <!--二级div m_unit关键属性：width：足够大
+       == ul : list-style:none;
+       == li : float:left;overflow:hidden(防止出现下拉框)
+       --> 
+
+       <!--二级div circles 关键属性：tlrb位置找好则可
+       == ol：list-style：none；
+       == li ：float:left;margin-right
+       == li。onStyle：事件触发时样式
+       -->
+
+       
+
+       <!--一级div宽度1000px-->
+        <div id="carousel">
+            <!--div.btn+div.m_unit+div.circles  3个二级div-->
+                
+                <div class="btns">
+                    <!--二级div，btn两个按钮-->
                     <a class="leftBtn"></a>
                     <a class="rightBtn"></a>
                 </div>
-                <ul>
-                    <li class="fBlock"><a href=""><img src="img/banner0.jpg" alt=""></a></li>
-                    <li><a href=""><img src="img/banner1.jpg" alt=""></a></li>
-                    <li><a href=""><img src="img/banner2.jpg" alt=""></a></li>
-                    <li><a href=""><img src="img/banner3.jpg" alt=""></a></li>
-                    <li><a href=""><img src="img/banner4.jpg" alt=""></a></li>
-                    <li><a href=""><img src="img/banner5.jpg" alt=""></a></li>
-                    <li><a href=""><img src="img/banner6.gif" alt=""></a></li>
-                    <li><a href=""><img src="img/banner7.jpg" alt=""></a></li>
-                </ul>
-            </div>
 
-            <div class="oFocus">
-                <ul>
-                    <li class="foccolor"><span></span></li>
-                    <li><span></span></li>
-                    <li><span></span></li>
-                    <li><span></span></li>
-                    <li><span></span></li>
-                    <li><span></span></li>
-                    <li><span></span></li>
-                    <li><span></span></li>
-                </ul>
-            </div>
+                <div class="m_unit">
+                    <!--二级div.m_unit用ul标签的li的a包裹img-->
+                    <ul>
+                        <li><a href=""><img src="img/banner0.jpg" alt=""></a></li>
+                        <li><a href=""><img src="img/banner1.jpg" alt=""></a></li>
+                        <li><a href=""><img src="img/banner2.jpg" alt=""></a></li>
+                        <li><a href=""><img src="img/banner3.jpg" alt=""></a></li>
+                        <li><a href=""><img src="img/banner4.jpg" alt=""></a></li>
+                        <li><a href=""><img src="img/banner5.jpg" alt=""></a></li>
+                        <li><a href=""><img src="img/banner6.gif" alt=""></a></li>
+                        <li><a href=""><img src="img/banner7.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+
+                <div class="circles">
+                    <!--二级div.circles用ol包裹li-->
+                    <ol>
+                        <li class="onStyle"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
         </div>
+
+
     </div>
 
     <div id="goodList">
