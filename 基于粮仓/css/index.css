@@ -123,14 +123,13 @@ a{
     height: 49px;
     margin: 0 auto;
     position: relative;
+    overflow-x: hidden;
 }
 /*#nav_classify>div>*{
     float:left;
 }*/
-#nav_classify>div>div{
-    float:rigth;
-}
 #goodsClassfiy{
+    float: left;
     width:665px;
     height: 49px;
 }
@@ -151,6 +150,55 @@ a{
     display: block;
     padding: 0 15px;
 }
+/*按钮搜索功能*/
+#nav_classify>div>div{
+    float:right;
+    width: 335px;   
+    height: 45px;
+    border-bottom: 4px solid #ededed;    
+}
+/*输入盒子*/
+#navzoom{
+    width: 335px;
+    height: 45px;
+    position: relative;
+    left:335px;
+    /*display: none;*/
+    border-bottom: 4px solid #25292e;
+}
+
+
+
+#nav_classify>div>div input{
+    width: 335px;
+    height: 25px;
+    padding: 10px 0;
+    border: none;
+    /* background-color: #f00; */
+    color: #878787;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 16px;
+}
+#nav_classify .nav_c12>a{
+    background: url('../img/serchicon.png') no-repeat; 
+    display: inline-block;
+    width: 33px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*iBanner的轮播效果*/
 .carousel{
@@ -234,69 +282,90 @@ a{
 #carousel .circles>ol>li.onStyle{
     background-color: #45494d;
 }
-/*
-#carousel>div{
+
+/*热门商品样式*/
+.goodlist{
+    width:100%;
+}
+#goodList{
     width:1000px;
-    height: 475px;
     margin: 0 auto;
-    /*margin-top: 25px;*/
-    /*position: relative;*/
-    /*background-color: #000;*/
+    position: relative;
 }
-/*#carousel .oBtns{
-    width: 930px;
-    height: 50px;
-    position: absolute;
-    top: 50%;
-    left: 35px;*/
-}*/
-/*#carousel .oBtns>a{
-    /*width: 50px;*/
-    /*height: 50px;
-    border-radius: 100%;
+#goodList>div{
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding: 46px 0 30px 0;
 }
-#carousel .oBtns>a:hover{
-    background-color: #878787;
-    opacity:0.8;
+#goodList>div>span{
+    color: #333;
+    font-family: "微软雅黑";
 }
-#carousel .oBtns .leftBtn{
-    float: left;
-}
-#carousel .oBtns .rightBtn{
-    float: right;
-}*/*/
-/*banner图片*/
-/*#carousel .oBanners ul{}
 
-#carousel .oBanners li{
+#goodList>ul{
+    list-style: none;
+    padding-top: 10px;
+}
+#goodList>ul>li{
+    float: left;
+    position: relative;
+    width:300px;
+    height:300px;
+    margin: 0 15px 30px;
+}
+#goodList>ul>li img{
+    width: 300px;
+    height:300px;
+    opacity: 1;
+    position:absolute;
+    z-index: -100;
+}
+#goodList>ul>li:hover img{
+    opacity:0.4;
+}
+#goodList>ul>li:hover>.bgzoom{
+    position: relative;
+    /*z-index: 0;*/
+    background-color: #000;
+    /*border-radius: 100%;*/
+    /*display: none;*/
+    opacity:0.9;
+    height:300px;
+}
+#goodsUl li>.bgzoom>a>p{
     display: none;
-    list-style-type: none;
 }
-#carousel .oBanners li.fBlock{
-    display: block;
+#goodsUl li:hover>.bgzoom>a{
+    text-align: center;
 }
-#carousel .oFocus ul{
-    margin-top: 3px;
-    padding: 7px 0;
-    height: 18px;
-    margin: 0 auto;
-    width: 208px;
-}
-#carousel .oFocus li{
-    list-style-type: none;
-    float: left;
-    vertical-align: top;
-}
-#carousel .oFocus li>span{
-    display: block;
-    width:20px;
-    height:4px;
-    margin:0 3px;
-    background: #e8e8e8; 
-}
-#carousel .oFocus li.foccolor>span{
-    background: #45494d;
-}*/
+#goodsUl li:hover>.bgzoom p.bg01{
 
-/*1000475
-martop23*/
+    position: absolute;
+    width: 300px;
+    top:100px;
+    z-index: 1;
+    color: #fff;
+    font-size:14px;
+    font-weight: bold;
+    display: inline-block;
+}
+#goodsUl li:hover>.bgzoom p.bg02{
+    position: absolute;
+    display: inline-block;
+    top:140px;
+    z-index: 1;
+    color: #fff;
+    font-size:12px;
+}
+#goodsUl li:hover>.bgzoom p.bg03{
+    position: absolute;
+    top:0;
+    left:0;
+    display: inline-block;
+    color: #0c6eba;
+    font-size:20px;
+    font-style:italic;
+    font-weight: bold;
+}
+
+

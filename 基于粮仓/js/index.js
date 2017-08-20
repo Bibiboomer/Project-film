@@ -37,7 +37,21 @@
     })
 
     
-    //输入框跳转
+    //输入框跳转：事件1和2
+
+    //输入框样式事件1：鼠标点击icon，输入框出现
+
+    oLeft = $("#navzoom").css("left");
+    
+    $(".nav_c12>a").click( function(e){
+        e.preventDefault();
+
+        oLeft = (oLeft == 0) ? 335 : 0;
+        $("#navzoom").animate({"left":oLeft},1000);
+        $("#navzoom").css("left",oLeft);
+    })
+
+
 
     //iBanner的传统轮播效果*(克隆下标为0的图片)
     //移入移出的按钮效果
@@ -101,7 +115,7 @@
             if(idx<0){
                 idx = 7;
                 //克隆之后多了一张，在临界点返回时不需要(img.lenght-1)
-                $m_unit.css("left",-8*475)
+                $m_unit.css("left",-8*1000)
             }
             $m_unit.animate( {"left":-1000*idx},2000);
 
@@ -111,9 +125,9 @@
     })
 
     //事件5：核心事件：点击rightBtn。图片向右移动，下标增大
-    $rightBtn.click( )
+    $rightBtn.click(rightBtnHandler )
 
-    function rightBtnHandler(rightBtnHandler){
+    function rightBtnHandler(){
       
         //函数节流
         if( $m_unit.is(":animated")) return;
@@ -151,3 +165,19 @@
         $circles.eq(n).addClass("onStyle").siblings().removeClass("onStyle");
     }
     
+
+
+//首页的商品goodslist获取==热门商品
+
+$.get("http://h6.duchengjiu.top/shop/api_goods.php",function(data){
+    console.log(data);
+    for( var i = 0 ; i < data.data.length;i++){
+        $("#goodsUl").append('<li><div class="bgzoom"><a><img src="'+data.data[i].goods_thumb+'" alt=""> \
+                    <p class="bg01">'+data.data[i].goods_name+'</p><p class="bg02">'+data.data[i].goods_desc+'</p> \
+                    <p class="bg03">'+"¥"+data.data[i].price+"</p> \
+                </a></div></li>");
+    }
+})
+
+//商品内文字p文字效果
+
