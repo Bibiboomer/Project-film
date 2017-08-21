@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#reGister{
+    width: 100%;
+    background-color: rgb(153,153,153);
+    /*opacity: 0.4;*/
+}
+#reGister>form{
+    width: 1000px;
+    /*height: 680px;*/
+    /*position: relative;*/
+    margin: 0 auto;
+    /*background-color: #000;*/
+    /*opacity: 0.4;*/
+    /*z-index: -1;*/
+}
+#reGister form>div{
+    /*position: absolute;*/
+    /*z-index: 1000;*/
+    display: inline-block;
+    text-align: center;
+    width: 1000px;
+    height: 50px;
+    margin-bottom: 40px;
+
+}
+#reGister input{
+    outline: none;
+   color: #fff;
+    font-size: 14px;
+    width:280px;
+    height: 20;
+    padding: 20px;
+    background-color: rgb(204, 204, 204);
+    border:none;
+}
+#reGister form div:nth-of-type(1){
+    padding-top:200px;
+    height:106px;
+}
+#reGister form div p>span:nth-of-type(1){
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 15px;
+    width: 60px;
+    display: inline-block;
+    margin-right: 15px;
+}
+#reGister form p span.tips{
+    display: none;
+}
+#reGister form p span.success{
+    display: none;
+}
+#reGister form p span.error{
+    display: none;
+}
+#reGister form div:nth-of-type(1)>a{
+    display: inline-block;
+    width: 260px;
+    height: 106px;
+    background-image: url('../img/reglogo.png');
+}
+#reGister form label {
+
+    color: #fff;
+    font-size: 12px;
+}
+#reGister form label input{
+    width: 10px;
+}
+#reGister form label+a{
+    color: #0c79cc;
+    font-size: 12px;
+}
+#reGister div.agreenBtn{
+    margin-bottom: 0;
+}
+#reGister p.agreenBtn{
+    width:882px;
+}
+#reGister .regBtn{
+    width: 500px;
+    margin-left: 275px;
+}
+#reGister .regBtn>input{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #25292e;
+}
+#reGister form ul>li{
+    list-style: none;
+    float:left;
+}
+#reGister form ul{
+    float: left;
+    width:200px;
+    height: 36px;
+    margin-left:385px;
+}
+#reGister form ul>li{
+    background-image: url('../img/register.png')
+}
+#reGister form ul>li:nth-of-type(2){
+    background-position:50px 0;
+}
+#reGister form ul>li:nth-of-type(3){
+    background-position:127px 0;
+}
+#reGister form ul>li:nth-of-type(4){
+    background-position:168px 0;
+}
+#reGister form div:nth-of-type(7)>a{
+
+    display: inline-block;
+    margin-left: -427px;
+    padding-top: 6px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+}
+/*#reGister form ul>li:hover{
+    background-image: url('../img/registerOn.png');
+    background-position: -2px -8px;
+}*/
+
+
+
+#reGister form ul>li>a{
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+
+
+
+
+
+
+
+

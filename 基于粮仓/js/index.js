@@ -1,3 +1,21 @@
+//登录页面
+
+
+
+//注册页面
+
+//>>1获取注册按钮
+var $register = $("#nav_topList li:eq(1)>a")
+
+// $register.click = function
+
+
+
+
+
+
+
+
 //鼠标进入购物车和消息b背景色改变
 //如果用CSS写不方便，要重新给.dropbox的两个li命名或者重复写两次
 //用js可以用parent()指代
@@ -49,8 +67,13 @@
         oLeft = (oLeft == 0) ? 335 : 0;
         $("#navzoom").animate({"left":oLeft},1000);
         $("#navzoom").css("left",oLeft);
+        console.log(1);
     })
 
+    //鼠标点击搜索商品
+    //获取搜索按钮
+    var $serachBtn = $(".nav_c12>a");
+    // $serachBtn.click = 
 
 
     //iBanner的传统轮播效果*(克隆下标为0的图片)

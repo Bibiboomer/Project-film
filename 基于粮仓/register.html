@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+
+</head>
+<body>
+</div>
+    <div id="reGister">
+        <form action="">
+            <div><a href=""></a></div>
+            <div>
+                <p>
+                    <span>用户名</span> 
+                    <!--两种方式：占位符placeholder和输入框的onblur和onfouce-->
+                    <input type="text" name="username" value="您的账户名和登录名" onfocus="this.value='';" onblur="this.value='您的账户名和登录名'">
+                    <!--得到焦点出现，失去焦点消失-->
+                    <span class="tips">支持中文、字母、数字、“-”“_”的组合，3-20个字符</span>
+                    <!--显示绿色图标-->
+                    <span class="success"></span>
+                    <!--红色图标+文字-->
+                    <span class="error">长度只能在3-20个字符之间</span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <span>设置密码</span> 
+                    <input type="text" name="username" value="建议至少使用两种字符组合" onfocus="this.value='';" onblur="this.value='建议至少使用两种字符组合'">
+                    <!--密码强度-->
+                    <!--<ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>-->
+                    <!--得到焦点出现，失去焦点消失-->
+                    <span class="tips">建议至少使用两种字符组合，6-20个字符</span>
+                    <!--显示绿色图标-->
+                    <span class="success"></span>
+                    <!--红色图标+文字-->
+                    <span class="error">长度只能在3-20个字符之间</span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <span>确认密码</span> 
+                    <input type="text" name="username" value="请再次输入密码" onfocus="this.value='';" onblur="this.value='请再次输入密码'">
+                    <!--得到焦点出现，失去焦点消失-->
+                    <span class="tips">请再次输入密码</span>
+                    <!--显示绿色图标-->
+                    <span class="success"></span>
+                    <!--红色图标+文字-->
+                    <span class="error">两次输入的密码不一致</span>
+                </p>
+            </div>
+            <div class="agreenBtn">
+                <p class="agreenBtn">
+                    <label ><input type="checkbox">同意</label>
+                    <a href="">良仓注册条款</a>
+                </p>
+            </div>
+            <div class="regBtn">
+                <input type="button" value="立即注册">
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#QQ"></a></li>
+                    <li><a href="#weibo"></a></li>
+                    <li><a href="#douban"></a></li>
+                    <li><a href="#腾讯"></a></li>
+                </ul>
+                <a href="">登录良仓</a>
+            </div>
+            <div></div>
+            <div></div>
+
+        </form>
+    </div>
+        <script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src = "js/register.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
