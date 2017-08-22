@@ -1,0 +1,126 @@
+.cartBox{
+    width: 100%;
+}
+#cart{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+/*#cart>div:nth-of-type(1){
+    display: inline-block;
+    width: 300px;
+}*/
+#cart>div:nth-of-type(1)>*{
+    /*width: 235px;*/
+    color: #6393b4;
+    font-size: 14px;
+    display: inline-block;
+}
+#cart>div:nth-of-type(1) span{
+    padding: 0 50px;
+}
+#cartList .listHead{
+    width:1000px;
+    height: 52px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+#cartList .listHead li{
+    list-style: none;
+    float: left;
+    padding: 15px 5px;
+    color: #666;
+    font-size: 15px;
+}
+#cartList .cart-list-checkAll{
+    width: 110px;
+    margin-left: -59px;
+}
+#cartList .cart-list-mas{
+    width: 300px;
+}
+#cartList .cart-list-qua{
+    width: 120px;
+    margin-left: 20px;
+}
+#cartList .cart-list-one{
+    width: 160px;
+}
+#cartList .cart-list-cout{
+    width: 160px;
+}
+#cartList .cart-list-doWhat{
+    margin-left: 30px;
+}
+/*购物车清单列表样式*/
+#cartList .listItem ul{
+    width: 1000px;
+    height: 100px;
+    border-bottom: 1px solid #f0f0f0;
+    list-style: none;
+    padding-left: inherit;
+    margin: inherit;
+}
+#cartList .listItem ul li{
+    float: left;
+    height: 70px;
+    padding: 15px 5px;
+}
+#cartList .listItem .checkbox{
+    position: relative;
+    top: -55px;
+    
+}
+#cartList .listItem .check-img{
+    width: 110px;
+}
+#cartList .listItem .check-img img{
+    /*display: block;*/
+    width: 70px;
+    height: 70px;
+}
+#cartList .listItem .good-message{
+    width: 300px;
+}
+#cartList .listItem .good-message a{
+    font-size: 12px;
+    color: #878787;
+    text-decoration: none;
+}
+#cartList .listItem .good-up-down{
+    width: 120px;
+}
+#cartList .listItem .good-up-down input{
+    width: 24px;
+    height: 18px;
+    text-align: center;
+    font-size: 12px;
+    border:none;
+    outline: none;
+}
+#cartList .listItem .good-up-down span{
+    width: 20px;
+    display: inline-block;
+}
+
+#cartList .listItem .one-price{
+    width: 160px;
+    color: #666;   
+    font-size: 12px; 
+}
+#cartList .listItem .count-this{
+    width: 160px;
+    color: #666;
+    font-size: 12px;
+}
+#cartList .listItem .del-this{
+    width: 90px;
+}
+#cartList .listItem .del-this a{
+    text-decoration: none;
+    color: #6393b4;
+    font-size: 12px;
+}
+
+
+

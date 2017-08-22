@@ -175,6 +175,7 @@ a{
     padding: 10px 0;
     border: none;
     /* background-color: #f00; */
+    outline: none;
     color: #878787;
     font-family: Arial;
     font-weight: 600;
@@ -309,6 +310,7 @@ a{
 #goodList>ul>li{
     float: left;
     position: relative;
+    cursor: pointer;
     width:300px;
     height:300px;
     margin: 0 15px 30px;

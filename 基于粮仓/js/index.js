@@ -1,11 +1,14 @@
-//登录页面
+// 判断当前用户已登录，否则显示注册登录
+//token相当于一个ID，因为此项目中的user_id有重复
+if( localStorage.getItem("token")){
+    $("#nav_topList li:eq(0)>a").html("小仙女"+localStorage.getItem("username")+"您好");
+    $("#nav_topList li:eq(1)>a").html("");
 
 
+}
 
-//注册页面
+//获取搜索跳转
 
-//>>1获取注册按钮
-var $register = $("#nav_topList li:eq(1)>a")
 
 // $register.click = function
 
@@ -195,7 +198,7 @@ var $register = $("#nav_topList li:eq(1)>a")
 $.get("http://h6.duchengjiu.top/shop/api_goods.php",function(data){
     console.log(data);
     for( var i = 0 ; i < data.data.length;i++){
-        $("#goodsUl").append('<li><div class="bgzoom"><a><img src="'+data.data[i].goods_thumb+'" alt=""> \
+        $("#goodsUl").append('<li><div class="bgzoom"><a href=detail.html?goods_id="'+data.data[i].goods_id+'"><img src="'+data.data[i].goods_thumb+'" alt=""> \
                     <p class="bg01">'+data.data[i].goods_name+'</p><p class="bg02">'+data.data[i].goods_desc+'</p> \
                     <p class="bg03">'+"¥"+data.data[i].price+"</p> \
                 </a></div></li>");

@@ -49,13 +49,25 @@
     display: inline-block;
     margin-right: 15px;
 }
-#reGister form p span.tips{
+#reGister form p.tips{
+    color: #fff;
+    font-size: 12px;
+    
     display: none;
 }
-#reGister form p span.success{
+#reGister form p.success{
+    color: #fff;
+    font-size: 12px;
     display: none;
 }
-#reGister form p span.error{
+#reGister form p.error{
+    color: #fff;
+    font-size: 12px;
+    display: none;
+}
+#reGister form p.repeat{
+    color: #fff;
+    font-size: 12px;
     display: none;
 }
 #reGister form div:nth-of-type(1)>a{
@@ -129,8 +141,6 @@
     background-image: url('../img/registerOn.png');
     background-position: -2px -8px;
 }*/
-
-
 
 #reGister form ul>li>a{
     display: block;

@@ -17,19 +17,20 @@
                 <p>
                     <span>用户名</span> 
                     <!--两种方式：占位符placeholder和输入框的onblur和onfouce-->
-                    <input type="text" name="username" value="您的账户名和登录名" onfocus="this.value='';" onblur="this.value='您的账户名和登录名'">
+                    <input type="text" name="username" value="您的账户名和登录名" onblur="if(this.value==''){this.value='您的账户名和登录名'}" onfocus="if(this.value=='您的账户名和登录名'){this.value=''}">
                     <!--得到焦点出现，失去焦点消失-->
-                    <span class="tips">支持中文、字母、数字、“-”“_”的组合，3-20个字符</span>
+                    <p class="tips">支持中文、字母、数字、“-”“_”的组合，3-20个字符</p>
                     <!--显示绿色图标-->
-                    <span class="success"></span>
+                    <p class="success">用户名可用</p>
                     <!--红色图标+文字-->
-                    <span class="error">长度只能在3-20个字符之间</span>
+                    <p class="error">长度只能在3-20个字符之间</p>
+                    <p class="repeat">用户名已存在，请重新输入</p>
                 </p>
             </div>
             <div>
-                <p>
+                <p class="pBox">
                     <span>设置密码</span> 
-                    <input type="text" name="username" value="建议至少使用两种字符组合" onfocus="this.value='';" onblur="this.value='建议至少使用两种字符组合'">
+                    <input type="text" class ="password1" name="password" value="建议至少使用两种字符组合" onblur="if(this.value==''){this.value='建议至少使用两种字符组合'}" onfocus="if(this.value=='建议至少使用两种字符组合'){this.value=''}">
                     <!--密码强度-->
                     <!--<ul>
                         <li></li>
@@ -37,26 +38,26 @@
                         <li></li>
                     </ul>-->
                     <!--得到焦点出现，失去焦点消失-->
-                    <span class="tips">建议至少使用两种字符组合，6-20个字符</span>
+                    <p class="tips">建议至少使用两种字符组合，6-20个字符</p>
                     <!--显示绿色图标-->
-                    <span class="success"></span>
+                    <p class="success">你的密码很安全</p>
                     <!--红色图标+文字-->
-                    <span class="error">长度只能在3-20个字符之间</span>
+                    <p class="error">长度只能在3-20个字符之间</p>
                 </p>
             </div>
             <div>
                 <p>
                     <span>确认密码</span> 
-                    <input type="text" name="username" value="请再次输入密码" onfocus="this.value='';" onblur="this.value='请再次输入密码'">
+                    <input type="text" class ="password2" name="password" value="请再次输入密码" onblur="if(this.value==''){this.value='请再次输入密码'}" onfocus="if(this.value=='请再次输入密码'){this.value=''}">
                     <!--得到焦点出现，失去焦点消失-->
-                    <span class="tips">请再次输入密码</span>
+                    <p class="tips">请再次输入密码</p>
                     <!--显示绿色图标-->
-                    <span class="success"></span>
+                    <p class="success">密码设置成功</p>
                     <!--红色图标+文字-->
-                    <span class="error">两次输入的密码不一致</span>
+                    <p class="error">两次输入的密码不一致</p>
                 </p>
             </div>
-            <div class="agreenBtn">
+            <div clpss="agreenBtn">
                 <p class="agreenBtn">
                     <label ><input type="checkbox">同意</label>
                     <a href="">良仓注册条款</a>

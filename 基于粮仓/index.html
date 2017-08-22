@@ -88,7 +88,7 @@
                 </ul>
                 <div class="nav_c12">
                     <div id="navzoom">
-                        <input type="text" value="search..." id="navInput">
+                        <input type="text" value="search..." id="navInput" onblur="if(this.value==''){this.value='search...'}" onfocus="if(this.value=='search...'){this.value=''}">
                     </div>
                     <a></a>
                 </div>
@@ -174,7 +174,7 @@
                 <!--以上是需要ji实现获取的数据-->
                 <!--li>a>(img+(p*3))-->
 
-                <!--<li><div class="bgzoom"><a>
+                <!--<li><div class="bgzoom"><a href="detail.html">
                         <img src="data.data[i].goods_thumb" alt="">
                         <p class="bg01">data.data[i].goods_name</p>
                         <p class="bg02">data.data[i].goods_desc</p>

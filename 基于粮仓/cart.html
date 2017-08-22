@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <!--写静态结构，-->
+    <div class="cartBox">
+        <div id="cart">
+            <div>
+                |
+                <div>
+                    <span>购物车</span>
+                | 
+                    <span>付款</span>  
+                </div>
+                |
+                <div></div>
+            </div>
+            <div id="cartList">
+                <!--购物车清单表头-->
+                <div class="listHead">
+                    <ul>
+                        <li class="cart-list-checkAll" >
+                            <label><input type="checkbox" id = "checkAll">
+                            <span>全选</span></label>
+                        </li>
+                        <li class="cart-list-mas">良品</li>
+                        <li class="cart-list-qua">数量</li>
+                        <li class="cart-list-one">单价(元)</li>
+                        <li class="cart-list-cout">小计(元)</li>
+                        <li class="cart-list-doWhat">操作</li>
+                    </ul>
+                </div>
+
+                <!--购物车清单列表-->
+                <!--item随着加入购物车事件的增加而增加-->
+                <div class="listItem">
+                    <ul>
+                        <li class="check-img">
+                            <input type="checkbox" class="checkbox">
+                            <input type="hidden" class="good_id" value="商品id">
+                            <a href=""><img src="http://imgs-qn.iliangcang.com/ware/goods/big/2/256/256622.jpg" alt=""></a>
+                        </li>
+                        <li class="good-message"><a href="">迷你便携式果汁榨汁机 英国畅销智能小家电</a></li>
+                        <li class="good-up-down">
+                            <span class="goodDown">-</span>
+                            <input class="goodShumu" type="text"  value="1">
+                            <span class="goodUp">+</span>
+                        </li>
+                        <li class="one-price">1199.00</li>
+                        <li class="count-this">1199</li>
+                        <li class="del-this"><a href="">删除</a></li>
+                    </ul>
+                    <!--先写出静态结构，js其实就是静态结构额复制和变量赋值-->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src = "js/cart.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
