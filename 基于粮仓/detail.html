@@ -9,18 +9,33 @@
 </head>
 <body>
     
-    <div id="bgzoom"></div>
+    <!--后面的标签会覆盖前面的标签-->
+    <!--detail背景是透明的，所以看上去是在最底层，其实是最上层-->
+    <div id="bgzoom">
+    </div>
+    <div id="sure-cart">
+        <p><button class="remove-alert" type="button"></button></p>
+        <p>加入购物车成功</p>
+    </div>
     <div id="detail">
-        <div><img src="http://imgs-qn.iliangcang.com/ware/goods/big/2/256/256622.jpg" alt=""></div>
+        <!--先写出基本模板和对应css样式-->
+        <!--一下是通过后台数据获取：-->
+        
+        <!--<div><img src="http://imgs-qn.iliangcang.com/ware/goods/big/2/256/256622.jpg" alt=""></div>
         <div class="message">
             <p class="good-message">迷你便携式果汁榨汁机 英国畅销智能小家电</p>
             <p class="good-price"> 
                 <span>价格</span>
                 <span>￥1099.00</span>
             </p>
-            <a href="" id= "cart">加入购物车</a>
-        </div>
+            <a id= "cart">加入购物车</a>
+        </div>-->
+
+
     </div>
+    
+
+
 
 
     <script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>

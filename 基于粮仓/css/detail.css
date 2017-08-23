@@ -9,8 +9,10 @@ html,body{
     height: 100%;
 }
 #detail{
+
     width: 1000px;
-    margin: 50px auto;
+    margin: 0 auto;
+    padding-top: 50px;
 }
 #detail>div{
     float: left;
@@ -39,7 +41,7 @@ html,body{
 }
 #detail .message>a{
     text-align: center;
-    background: url(../img/carticon.png) no-repeat;
+    background: url('../img/carticon.png') no-repeat;
     display: inline-block;
     width: 160px;
     height: 32px;
@@ -52,6 +54,7 @@ html,body{
     border: 1px solid black;
     background-color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 /*显示要登录时样式变化*/
@@ -62,5 +65,46 @@ html,body{
     z-index: 1px;
     background-color: #333;
     opacity: 0.4;
+    display: none;
 }
+#sure-cart{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 433px;
+    height: 127px;
+    background-color: #000;
+    overflow: hidden;
+    border-radius: 7px;
+    display: none;
+}
+#sure-cart>p:nth-of-type(1){
+    height: 33px;
+    background: url('../img/alertcart.png') no-repeat;
+    background-position: 10px 4px;
+    background-color: rgb(40, 35, 34);
+}
+#sure-cart>p:nth-of-type(2){
+    height: 94px;
+    line-height: 94px;
+    text-align: center;
+    background-color: rgb(241, 242, 247);
+    color: #333;
+    font-size: 12px;
+}
+#sure-cart .remove-alert{
+    width: 33px;
+    height: 32px;
+    margin-left: 400px;
+    background-color: initial;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
 

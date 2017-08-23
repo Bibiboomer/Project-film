@@ -3,11 +3,11 @@
 if( localStorage.getItem("token")){
     $("#nav_topList li:eq(0)>a").html("小仙女"+localStorage.getItem("username")+"您好");
     $("#nav_topList li:eq(1)>a").html("");
-
-
 }
 
 //获取搜索跳转
+
+
 
 
 // $register.click = function
@@ -61,22 +61,53 @@ if( localStorage.getItem("token")){
     //输入框跳转：事件1和2
 
     //输入框样式事件1：鼠标点击icon，输入框出现
+    //输入框修改value值，鼠标点击icon，跳转
 
-    oLeft = $("#navzoom").css("left");
-    
+    var oLeft = $("#navzoom").css("left");
+
     $(".nav_c12>a").click( function(e){
-        e.preventDefault();
+        if($("#navInput").val()==="search..."){
+            e.preventDefault();
 
-        oLeft = (oLeft == 0) ? 335 : 0;
-        $("#navzoom").animate({"left":oLeft},1000);
-        $("#navzoom").css("left",oLeft);
-        console.log(1);
+            oLeft = (oLeft == 0) ? 335 : 0;
+            $("#navzoom").animate({"left":oLeft},300);
+            $("#navzoom").css("left",oLeft);
+            console.log(1);
+        }else{
+            var search = $("#navInput").val();
+
+            location.href = "detail.html?goods_id="+search;
+
+            //有bug记得修改，返回时点击搜索又跳转，下面的这一条语句没有达到效果
+            $("#navInput").val()= search;
+            console.log("00909");
+        }
     })
 
-    //鼠标点击搜索商品
-    //获取搜索按钮
-    var $serachBtn = $(".nav_c12>a");
-    // $serachBtn.click = 
+    
+    // if($("#navInput").val()==="search..."){
+
+    //     console.log($("#navInput").val()==="search...");
+    //     $(".nav_c12>a").click( function(e){
+    //         // e.preventDefault();
+
+    //         // oLeft = (oLeft == 0) ? 335 : 0;
+    //         // $("#navzoom").animate({"left":oLeft},300);
+    //         // $("#navzoom").css("left",oLeft);
+    //         // console.log(1);
+
+    //         // location.href = "detail.html?goods_id=" + search;
+    //         // location.href = "detail.html?goods_id=" + search;
+    //     })
+    // }else if($("#navInput").val()!=="search..."){
+    //         $(".nav_c12>a").click(function(){
+
+    //             var search = $("#navInput").val();
+
+    //             location.href = "detail.html?goods_is="+search;
+    //         })
+    // }
+
 
 
     //iBanner的传统轮播效果*(克隆下标为0的图片)
@@ -198,7 +229,7 @@ if( localStorage.getItem("token")){
 $.get("http://h6.duchengjiu.top/shop/api_goods.php",function(data){
     console.log(data);
     for( var i = 0 ; i < data.data.length;i++){
-        $("#goodsUl").append('<li><div class="bgzoom"><a href=detail.html?goods_id="'+data.data[i].goods_id+'"><img src="'+data.data[i].goods_thumb+'" alt=""> \
+        $("#goodsUl").append('<li><div class="bgzoom"><a href=detail.html?goods_id='+data.data[i].goods_id+'><img src="'+data.data[i].goods_thumb+'" alt=""> \
                     <p class="bg01">'+data.data[i].goods_name+'</p><p class="bg02">'+data.data[i].goods_desc+'</p> \
                     <p class="bg03">'+"¥"+data.data[i].price+"</p> \
                 </a></div></li>");
