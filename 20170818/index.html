@@ -25,9 +25,9 @@
 			$(function(){
 				
 				//页面导航；分类列表功能
-				$.get("http://h6.duchengjiu.top/shop/api_cat.php",function(data){
-					var obj = data;
-//					console.log(obj);
+				$.get("http://h6.duchengjiu.top/shop/api_cat.php",function(obj){
+					// var obj = data;
+					console.log(obj);
 					
 					for(var i=0;i<obj.data.length;i++){
 						

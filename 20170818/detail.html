@@ -7,7 +7,9 @@
 	<body>
 		<p>
 			<input type="text" id="str"/>
-			<input type="button" id="btn" value="搜索"/>
+			<input type="button" id="btn1" value="搜索"/>
+			<input type="button" id="btn2" value="广告位"/>
+			<input type="button" id="btn3" value="广告"/>
 			<div></div>
 		</p>		
 		
@@ -15,7 +17,7 @@
 		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			
-			$("#btn").click(function(){
+			$("#btn1").click(function(){
 				
 				var strNew = $("#str").val();
 				//https://www.w3cschool.cn/jquery/attributes-val.html
@@ -49,11 +51,19 @@
 //						$("#goodsUl").append('<li><img src="' +obj.data[i].goods_thumb+ '" /><p>' +obj.data[i].goods_name+ '</p><p>' +obj.data[i].goods_desc+ '</p><p class="price">' +obj.data[i].price+ '</p></li>');
 //					}
 				}
-				
-				
 			})
 			})
-			
+			$("#btn2").click( function(){
+				$.get("http://h6.duchengjiu.top/shop/api_position.php" , function(data){
+					// for( var i = 0 ; i < data.data.length ; i++){
+					// 		$("div").append('<li><img src="' +data.data[i].goods_thumb+ '" /><p>' +data.data[i].goods_name+ '</p><p>' +data.data[i].goods_desc+ '</p><p class="price">' +data.data[i].price+ '</p></li>');
+					// 	}
+					console.log(data);
+				})
+			})
+			$("#btn3").click( function(){
+				
+			})
 			
 		</script>
 	</body>
