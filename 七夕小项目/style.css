@@ -2,28 +2,210 @@
     padding: 0;
     margin: 0;
 }
-
-html{
-   font-size: 100px; 
-}
-
-
-#project-qixi{
+/*窗口大于640.所以1rem=100px*/
+.project-qixi{
     overflow: hidden;
     margin: 0 auto;
     width: 7.5rem;
     height: 13.34rem;
-    background-image: url('img/basisBg.png');
 }
-.ucai-index{
-    width: 1.5rem;
-    height: 0.45rem;
-    margin-left: 0.2rem;
-    margin-top: 0.42rem;
+#static{
+    width: 7.5rem;
+    height: 13.34rem;
+    background-image: url('img/static.png'); 
 }
-.ucai-index>a{
-    width: 1.5rem;
-    height: 0.45rem;
+#runing{
+    display: none;
+    width: 7.5rem;
+    height: 13.34rem;
+    background-image: url('basisBg.png');
+}
+#static .logohref{
+    position: relative;
+    top: 0.36rem;
+    width: 1.6rem;
+    height: 0.55rem;
+    z-index: 1007;
     display: block;
+    float: left;
+    cursor: pointer;
+    margin-left: 0.16rem;
+}
+#static .jump-pass{
+    position: relative;
+    top: 0.36rem;
+    width: 1.5rem;
+    height: 0.55rem;
+    z-index: 1007;
+    display: block;
+    float: right;
     cursor: pointer;
 }
+
+#static .btn-s{
+    position: relative;
+    /* bottom: 0rem; */
+    left: 36%;
+    top: 11.78rem;
+    width: 2.2rem;
+    height: 0.6rem;
+    background-image: url('img/btn/btn-s.png');
+}
+
+#static .btn-l{
+    position: relative;
+    left: 33.5%;
+    top:11.13rem;
+    /*opacity: 0.5;*/
+    width: 2.54rem;
+    height: 0.70rem;
+    background-image: url('img/btn/btn-l.png');
+}
+
+
+
+
+
+
+
+
+.ucai-index-top{
+    width: 7.5rem;
+    height: 0.55rem;
+    /* margin-left: 0.2rem; */
+    margin-top: 0.32rem;
+}
+.ucai-index-top .logohref{
+    width: 1.6rem;
+    height: 0.55rem;
+    position: relative;
+    z-index: 1007;
+    display: block;
+    float: left;
+    cursor: pointer;
+    margin-left: 0.16rem;
+}
+.ucai-index-top .jump-pass{
+    position: relative;
+    z-index: 1007;
+    width: 1.5rem;
+    height: 0.55rem;
+    display: block;
+    float: right;
+    cursor: pointer;
+    background: url('img/btn/jump-pass.png') no-repeat;
+}
+
+#bggrey{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 7.5rem;
+    height: 13.34rem;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #000;
+    opacity: 0.5;
+    background-image: url('flase.jpg');
+    /*z-index: -1;*/
+}
+
+#flybird{
+    width: 7.5rem;
+    height: 13.34rem;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    animation: flybird 1.8s infinite linear; 
+    /*opacity: 0.2;
+    background-color: #000;*/
+}
+@keyframes flybird{
+    0% {background-image: url('img/flybird/bird1.png');}
+    7% {background-image: url('img/flybird/bird2.png');}
+    14% {background-image: url('img/flybird/bird3.png');}
+    21% {background-image: url('img/flybird/bird4.png');}
+    28% {background-image: url('img/flybird/bird5.png');}
+    35% {background-image: url('img/flybird/bird6.png');}
+    42% {background-image: url('img/flybird/bird7.png');}
+    49% {background-image: url('img/flybird/bird8.png');}
+    56% {background-image: url('img/flybird/bird9.png');}
+    63% {background-image: url('img/flybird/bird10.png');}
+    70% {background-image: url('img/flybird/bird11.png');}
+    77% {background-image: url('img/flybird/bird12.png');}
+    85% {background-image: url('img/flybird/bird13.png');}
+    92% {background-image: url('img/flybird/bird14.png');}
+    100% {background-image: url('img/flybird/bird15.png');}
+    
+}
+#flyflower{
+    width: 7.5rem;
+    height: 13.34rem;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    animation: flyflower 5s infinite linear forwards; 
+}
+#flyflower{
+    width: 7.5rem;
+    height: 13.34rem;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    animation: flyflower 2.5s infinite linear; 
+}
+@keyframes flyflower{
+    0% {background-image: url('img/flyflower/flower1.png');}
+    3% {background-image: url('img/flyflower/flower2.png');}
+    6% {background-image: url('img/flyflower/flower3.png');}
+    9% {background-image: url('img/flyflower/flower4.png');}
+    12% {background-image: url('img/flyflower/flower5.png');}
+    15% {background-image: url('img/flyflower/flower6.png');}
+    18% {background-image: url('img/flyflower/flower7.png');}
+    21% {background-image: url('img/flyflower/flower8.png');}
+    24% {background-image: url('img/flyflower/flower9.png');}
+    27% {background-image: url('img/flyflower/flower10.png');}
+    30% {background-image: url('img/flyflower/flower11.png');}
+    33% {background-image: url('img/flyflower/flower12.png');}
+    36% {background-image: url('img/flyflower/flower13.png');}
+    39% {background-image: url('img/flyflower/flower14.png');}
+    42% {background-image: url('img/flyflower/flower15.png');}
+    45% {background-image: url('img/flyflower/flower16.png');}
+    48% {background-image: url('img/flyflower/flower17.png');}
+    51% {background-image: url('img/flyflower/flower18.png');}
+    54% {background-image: url('img/flyflower/flower19.png');}
+    57% {background-image: url('img/flyflower/flower20.png');}
+    60% {background-image: url('img/flyflower/flower21.png');}
+    63% {background-image: url('img/flyflower/flower22.png');}
+    66% {background-image: url('img/flyflower/flower23.png');}
+    69% {background-image: url('img/flyflower/flower24.png');}
+    72% {background-image: url('img/flyflower/flower25.png');}
+    75% {background-image: url('img/flyflower/flower26.png');}
+    78% {background-image: url('img/flyflower/flower27.png');}
+    81% {background-image: url('img/flyflower/flower28.png');}
+    84% {background-image: url('img/flyflower/flower29.png');}
+    87% {background-image: url('img/flyflower/flower30.png');}
+    90% {background-image: url('img/flyflower/flower31.png');}
+    93% {background-image: url('img/flyflower/flower32.png');}
+    96% {background-image: url('img/flyflower/flower33.png');}
+    99% {background-image: url('img/flyflower/flower34.png');}
+    100% {background-image: url('img/flyflower/flower35.png');}
+}
+#blingstart{
+    width: 7.5rem;
+    height: 13.34rem;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    animation: twinkling 1s infinite ease-in-out; 
+}
+@keyframes twinkling{
+    /*0% {background-image: url('img/blingstart/start2.png');}*/
+    0%{opacity: 0;}
+    0%{opacity: 1;}
+    50% {background-image: url('img/blingstart/start1.png');}
+    80% {background-image: url('img/blingstart/start2.png');}
+}
+
