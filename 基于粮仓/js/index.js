@@ -76,10 +76,34 @@ if( localStorage.getItem("token")){
         }else{
             var search = $("#navInput").val();
 
-            location.href = "detail.html?goods_id="+search;
+            //使用ajax参数获取val匹配的数据
+            //根据search_text匹配相应数据回传
+
+            $.ajax({
+                "url": "http://h6.duchengjiu.top/shop/api_goods.php",
+                "type": "GET",
+                "data": {
+                    "search_text": search
+                },
+                "dataType": "json",
+                "success": function(data){
+
+                    console.log(data);
+                    //节点操作
+                    //for循环获取返回的数据(data)：中的每一条data
+                    for( var i = 0 ; i < data.data.length ; i++){
+
+                        
+                    }
+                }
+
+            })
+
+
+            // location.href = "d?etail.html?goods_id="+search;
 
             //有bug记得修改，返回时点击搜索又跳转，下面的这一条语句没有达到效果
-            $("#navInput").val()= search;
+            // $("#navInput").val()= search;
             console.log("00909");
         }
     })

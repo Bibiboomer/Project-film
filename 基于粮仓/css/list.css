@@ -1,0 +1,92 @@
+#list-box{
+    width: 100%;
+}
+
+#list-box>ul{
+    width: 1000px;
+    margin: 0 auto;
+    list-style: none;
+    overflow: hidden;
+}
+#list-box li{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+    float: left;
+}
+#list-box li>a{
+    display: block;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+#list-box img{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+}
+#list-box .middle-grey{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top:0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.75;
+    display: none;
+    cursor: pointer;
+}
+#list-box .top-text{
+    display: none;
+    text-align: center;
+}
+#list-box .bg01{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 300px;
+    z-index: 1;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    /*display: none;*/
+    
+    /*display: inline-block;*/
+}
+#list-box .bg02{
+    position: absolute;
+    top: 165px;
+    left: 0;
+    width: 250px;
+    padding: 0 25px;;
+    /*display: inline-block;*/
+    z-index: 1;
+    color: #fff;
+    font-size: 12px;
+    /*display: none;*/
+    
+}
+#list-box .bg03{
+    position: absolute;
+    top:0;
+    left:0;
+    /*display: inline-block;*/
+    color: #0c6eba;
+    font-size:20px;
+    font-style:italic;
+    font-weight: bold;
+    /*display: none;*/
+}
+
+#list-box ul>li:hover .top-text{
+    display: block;
+
+}
+#list-box li:hover .middle-grey{
+    display: block;
+}
+/*#list-box li:hover>
+*/
