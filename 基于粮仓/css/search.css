@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#search-list{
+    width: 100%;
+}
+#search-list>ul{
+    width: 1000px;
+    margin: 0 auto;
+    list-style: none;
+}
+#search-list>ul>li{
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+}
+#search-list>ul a{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    text-decoration: none;
+}
+#search-list .bottom-img>img{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left:0;
+    width: 300px;
+    height: 300px;
+    
+}
+#search-list .middle-grey{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 2;
+    display: none;
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+    opacity: 0.75;
+}
+#search-list .top-text{
+    display: none;
+    text-align: center;
+}
+#search-list .top-text>p{
+    position: absolute;
+    left:0;
+    width: 300px;
+    z-index: 3;
+    color: #fff;
+}
+#search-list .bg01{
+    top: 100px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#search-list .bg02{
+    top: 165px;
+    width: 250px;
+    padding: 0 25px;
+    font-size: 12px;
+}
+#search-list .bg03{
+    top:0;
+    color: #0c6eba;
+    font-size:20px;
+    font-style:italic;
+    font-weight: bold;
+}
+#search-list ul>li:hover .top-text{
+    display: block;
+
+}
+#search-list li:hover .middle-grey{
+    display: block;
+}
+

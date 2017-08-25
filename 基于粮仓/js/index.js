@@ -75,6 +75,8 @@ if( localStorage.getItem("token")){
             console.log(1);
         }else{
             var search = $("#navInput").val();
+            
+
 
             //使用ajax参数获取val匹配的数据
             //根据search_text匹配相应数据回传
@@ -89,18 +91,26 @@ if( localStorage.getItem("token")){
                 "success": function(data){
 
                     console.log(data);
-                    //节点操作
-                    //for循环获取返回的数据(data)：中的每一条data
-                    for( var i = 0 ; i < data.data.length ; i++){
-
-                        
+                    //成功后若data.data.lenth>0才实现条跳转
+                    if(data.data.length > 0){
+                        location.href = "search.html?goods_id="+search;
+                    }else{
+                        $("#alettip").css("display","block");
+                        $("#greybg").css("display","block");
+                            $("body").css("overflow","hidden");
+                        $(".remove-alert").click(function(){
+                            $("#alettip").css("display","none");
+                            $("#greybg").css("display","none");
+                            $("body").css("overflow","auto");                            
+                        })
                     }
+
+                    
                 }
 
             })
 
 
-            // location.href = "d?etail.html?goods_id="+search;
 
             //有bug记得修改，返回时点击搜索又跳转，下面的这一条语句没有达到效果
             // $("#navInput").val()= search;
