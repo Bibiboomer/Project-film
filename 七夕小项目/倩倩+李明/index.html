@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--<script>
+       
+
+    </script>-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="display:none">
+        <ul id="bgbox">
+            <li><img src="img/static.png" alt=""></li>
+            <li><img src="basisBg.png" alt=""></li>            
+        </ul>
+        <ul id="birdbox">
+            <!--<li><img src="img/flybird/bird1.png" alt=""></li>-->
+        </ul>
+        <ul id="flowerbox">
+
+        </ul>
+    </div>
+    <script src="jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>    
+    <script>
+        //for循环添加小鸟页面预加载
+        for( var i = 1 ; i < 16 ;i++){
+            var li1 = '<li><img src="img/flybird/bird'+i+'.png" alt=""></li>';
+            $("#birdbox").append(li1);
+        }
+        //for循环添加花瓣图片预加载
+
+        for( var i = 1 ; i < 36 ;i++){
+            var li2 = '<li><img src="img/flyflower/flower'+i+'.png" alt=""></li>';
+            $("#flowerbox").append(li2);
+        }
+    </script>
+    <div class="project-qixi">
+        <!--静态页面-->
+        <div id="static">
+            <!--忽大忽小按钮-->
+            <div class="direct-to">
+                <a href="http://www.ucai.cn/index" class="logohref"></a>
+                <a href="http://www.ucai.cn/index" class="jump-pass"></a>
+            </div>
+
+            <p class="btn-s"></p>
+            <p class="btn-l"></p>
+        </div>
+
+        <!--动态页面-->
+        <div id="runing">
+
+            <div class="ucai-index-top">
+                <a href="http://www.ucai.cn/index" class="logohref"></a>
+                <!--<a href="http://www.ucai.cn/index" class="jump-pass"></a>-->
+            </div>
+            <!--<button type="button" class="donow-in"> </button>-->
+            <div id="flybird">
+            </div>
+            <div id="flyflower">
+            </div>
+            <div id="blingstart">
+            </div>
+            <a href="http://www.ucai.cn/index"></a>
+        </div>
+
+        
+        
+
+    </div>
+    <div id="bg-grey"></div>
+
+
+
+    <script src="jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src = "main.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<link rel="stylesheet" href="css/cart.css" />
+	</head>
+	<body>
+		<div class="shop" id="Shop">
+			<h1>我的购物车</h1>
+			<div class="shop-list">
+			<div class="shop-list-check">
+				<input type="checkbox" id="selectAll"/>
+				<i>全选</i>
+			</div>
+			
+			<div class="shop-list-mas">商品信息</div>
+			<div class="shop-list-one">单价（元）</div>
+			<div class="shop-list-s">数量</div>
+			<em>金额（元）</em>
+			<span>操作</span>
+			</div>
+			
+			<!--这里记得要注释掉-->
+			<div class="goods">
+				<div class="goods-box">
+					<input type="checkbox" class="chkbox" />
+					<input type="hidden" class="goods_id" value="商品id"/>
+					<img src=" http://imgs-qn.iliangcang.com/ware/goods/big/2/256/256622.jpg " alt="" />
+					<p>迷你便携式果汁榨汁机 英国畅销智能小家电</p>
+				</div>
+				<div class="goods-one">1199</div>
+				<div class="goods-lists">
+					<span class="left-button">-</span>
+					<input type="text" class="center-text" value="1"/>
+					<span class="right-button">+</span>
+				</div>
+				<div class="goods-sum">1199</div>
+				<div class="goods-op">
+					<span>删除</span>
+				</div>
+			</div>
+			
+			
+			
+			
+		</div>
+		<div class="shop-set" id="shopSet">
+			<div class="shop-set-box">
+				<span id="Delete">选择删除</span>
+				<div class="shop-set-box-ri">
+					<p class="shop-set-box-ri-1">
+						已选商品
+						<em id="Amount">0</em>
+						<span>
+							总价（不含运费）
+							<em id="Money">￥0</em>
+						</span>
+					</p>
+					<a href="/checkout.html">去结算</a>
+				</div>
+			</div>
+		</div>
+		
+	    
+	    <script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript">
+	
+			$(function(){
+				
+				$.ajax({
+					"url": "http://h6.duchengjiu.top/shop/api_cart.php?token="+localStorage.getItem("token"),
+					"type": "get",
+					"dataType": "json",
+					"success": function(response){
+						console.log(response);
+						//判断购物车中有没有商品
+						if(response.data.length > 0 ){
+							//循环数据
+							for(var i=0;i<response.data.length;i++){
+								var obj = response.data[i];
+								
+								var html = `<div class="goods">
+												<div class="goods-box">
+													<input type="checkbox" class="chkbox" />
+													<input type="hidden" class="goods_id" value=" ${ obj.goods_id } "/>
+													<img src=" ${ obj.goods_thumb } " alt="" />
+													<p> ${ obj.goods_name } </p>
+												</div>
+												<div class="goods-one">${ obj.goods_price }</div>
+												<div class="goods-lists">
+													<span class="left-button">-</span>
+													<input type="text" class="center-text" value="${ obj.goods_number }"/>
+													<span class="right-button">+</span>
+												</div>
+												<div class="goods-sum">${ obj.goods_price * obj.goods_number }</div>
+												<div class="goods-op">
+													<span>删除</span>
+												</div>
+											</div>`;
+											
+									$("#Shop").html( $("#Shop").html()  +html  );
+								
+							}
+							
+							
+							//添加事件
+//							$(".goods-op").click(function(){
+//								alert("我是删除按钮！");
+//							})
+						}
+						
+					}
+				});
+				
+				
+				
+				
+			})
+	
+	
+	
+
+	
+				
+				
+//			
+	    </script>
+	</body>
+</html>
