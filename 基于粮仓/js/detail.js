@@ -121,7 +121,7 @@ $(function(){
                         },
                         "dataType": "json",
                         "success": function(){
-
+                            console.log(goods_number);
                             //成功之后使用后存储商品的购买数量到本地存储中
                             localStorage.setItem("cart"+goodsId[1] , goods_number)//键值对
 

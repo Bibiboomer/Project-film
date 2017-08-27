@@ -51,6 +51,8 @@ $(function(){
                                             alert("确定");
                                                 var del_Ul= this.parentNode.parentNode;
                                                 updataCartAjax( del_Ul , 0)
+                                                
+                                                
                                                 $(del_Ul).remove();
                                                 showSum();
 
@@ -69,9 +71,9 @@ $(function(){
                                             })
 
                                             //文本框输入事件
-                                            // $(".goodShumu").blur(function(){
-                                            //     updataCart(this,"文本框输入");
-                                            // })
+                                            $(".goodShumu").blur(function(){
+                                                updataCart(this,"文本框输入");
+                                            })
 											
 											//键盘事件监听上、下两个按钮
 											$(".goodShumu").keydown(function(){
@@ -139,6 +141,16 @@ $(function(){
                 "dataType": "json",
                 "success": function(data){
                     console.log(data);
+                    console.log(good_Id);
+                    console.log(number);
+                    alert("text");
+                },
+                "error": function(data){
+                                        console.log(data);
+                    console.log(good_Id);
+                    console.log(number);
+                    alert("text");
+                    alert("wrong");
                 }
 
             })
@@ -183,7 +195,7 @@ $(function(){
                 if( event.target.type ==="text"){
                     return
                 }
-                // console.log("事件3");
+                // console.lo`g("事件3");
         })
 
         //事件4：选中元素删除商品信息
@@ -197,7 +209,7 @@ $(function(){
             for( var i = 0  ; i < inputs.length ;i++){
 
                 //删除的同时要跟新数据→获取goods-id
-                // var good_Id = document.getElementsByClassName(".good_id")[0].value;
+                var good_Id = document.getElementsByClassName("good_id")[0].value;
 
                 var ul_muit = inputs[i].parentNode.parentNode;
 
@@ -270,10 +282,10 @@ $(function(){
 
 
         //结尾事件:结算事件页面跳转
-        $("#checkout").click(function(){
+        $(".cart-payfor").click(function(){
             
-            var sum = $("#Money").text().substr(1);
-        //console.log(sum);
+            var sum = $("#Moneys").text();
+        console.log(sum);
             
             location.href = "checkout.html?sum=" + sum;
         })
