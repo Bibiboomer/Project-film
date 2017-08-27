@@ -116,7 +116,8 @@ $(function(){
                         "url": "http://h6.duchengjiu.top/shop/api_cart.php?token="+localStorage.token,//用户当前API接口
                         "type": "POST",
                         "data": {
-
+                            "goods_id":goodsId[1],
+                            "number":goods_number
                         },
                         "dataType": "json",
                         "success": function(){

@@ -39,9 +39,11 @@
 
                 <!--购物车清单列表-->
                 <!--item随着加入购物车事件的增加而增加-->
-                <!--以下是基本模板：从listItem-->
+
+                <!--先写出静态结构，js其实就是静态结构额复制和变量赋值-->
+                <!--js中操作，复制html模板，用字符串模板，只需要把有"."连接的变量用${}包裹起来即可-->
                 <div class="listItem">
-                    <ul>
+                    <!--<ul>
                         <li class="check-img">
                             <input type="checkbox" class="checkbox">
                             <input type="hidden" class="good_id" value="商品id">
@@ -56,14 +58,30 @@
                         <li class="one-price">1199.00</li>
                         <li class="count-this">1199</li>
                         <li class="del-this"><a href="">删除</a></li>
-                    </ul>
-                    <!--先写出静态结构，js其实就是静态结构额复制和变量赋值-->
-
-
+                    </ul>-->
                 </div>
 
+
+
+
+
                 <div id="listFoot">
-                    
+                    <ul>
+                        <li class="remove-choose">
+                            <span>选择删除</span>
+                        </li>
+                        <li class="cart-choose">
+                            <span>已选商品</span>
+                            <em>0</em>
+                            <span>件</span>
+                        </li> 
+                        <li class="cart-money"> 
+                            <span>合计（不含运费）：</span>
+                            <em><span>￥</span>0</em>
+                        </li>
+                        <li class="cart-payfor"><a>结算</a></li>
+                        
+                    </ul>
                 </div>
             </div>
         </div>
