@@ -150,14 +150,15 @@
     cursor: pointer;
 }
 #listFoot em{
-
+    display: inline-block;
+    width: 25px;
     font-weight: bold;
     font-size: 14px;
     color: #6393b4;
     font-family: "微软雅黑";
 }
 #listFoot .cart-choose{
-    padding-right: 107px;
+    padding-right: 100px;
 }
 #listFoot .cart-money{
     padding-right: 5px;
