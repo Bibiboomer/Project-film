@@ -214,8 +214,13 @@ $(function(){
                 var ul_muit = inputs[i].parentNode.parentNode;
 
                 updataCartAjax(ul_muit,0);
+            
 
                 ul_muit.remove();
+                console.log("cart"+good_Id);
+
+                
+                localStorage.removeItem("cart"+good_Id);
             }
             
             //调用showSum函数
